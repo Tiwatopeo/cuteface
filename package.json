@@ -1,5 +1,5 @@
 {
-  "name": "cuteapp",
+  "name": "cuteface",
   "version": "1.0.0",
   "description": "CBT APP ",
   "main": "sever.js",
@@ -8,17 +8,17 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Tiwatopeo/cuteapp.git"
+    "url": "git+https://github.com/Tiwatopeo/cuteface.git"
   },
   "keywords": [
-    "cuteapp"
+    "cuteface"
   ],
   "author": "tiwatope",
   "license": "UNLICENSED",
   "bugs": {
-    "url": "https://github.com/Tiwatopeo/cuteapp/issues"
+    "url": "https://github.com/Tiwatopeo/cuteface/issues"
   },
-  "homepage": "https://github.com/Tiwatopeo/cuteapp#readme",
+  "homepage": "https://github.com/Tiwatopeo/cuteface#readme",
   "dependencies": {
     "blueimp-file-upload": "^10.32.0",
     "body-parser": "^1.20.0",
