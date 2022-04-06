@@ -4,7 +4,8 @@
   "description": "CBT APP ",
   "main": "sever.js",
   "scripts": {
-    "test": "mocha"
+    "test": "mocha",
+	"start": "node sever.js"
   },
   "repository": {
     "type": "git",
