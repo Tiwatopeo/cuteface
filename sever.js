@@ -23,6 +23,49 @@ myapp.get('/', function(req, res) {
    res.sendFile( __dirname);
    res.sendFile(path.join(__dirname + '/school/home/index.html'));
 });
+myapp.use(express.static(__dirname + '/school/home'));
+myapp.use(bodyParser.urlencoded({ extended: true }));
+myapp.use(bodyParser.json());
+
+
+myapp.post('/auth/signup', function (req, res) {
+client.connect();	
+var datae = {};
+var school = {};
+var name = req.body.name;
+var age = req.body.age;
+var classes = req.body.class;
+var sex = req.body.sex;
+var scores = req.body.scores;
+
+var maId = 3;	
+
+	
+const text = "INSERT INTO School(id,name,age,class,sex,scores) VALUES('NULL', '"+ name +"', '"+ age +"', '"+ classes +"', '"+ sex +"', '"+ scores +"') RETURNING id;";
+
+client.query(text, (err, resp) => {
+if (err){
+datae['status'] = 404;
+datae['error'] = "Error: Problem occur when signing up...";
+res.send(datae);
+}else{
+	
+datae['status'] = 200;
+ datae = {};
+ name = first_name;
+ age = age;
+ classes = classes ;
+ sex = sex;
+ scores = scores; 
+
+
+datae['data'] = "now you are register....";
+res.send(datae);
+}
+});
+});
+
+
 const portr = process.env.PORT || 3000;
 
 myapp.listen(portr);
